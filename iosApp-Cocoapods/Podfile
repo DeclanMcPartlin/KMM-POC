@@ -1,0 +1,14 @@
+
+platform :ios, '10.0'
+use_frameworks!
+
+def shared_pods
+    pod 'UnityAds', :path => 'Frameworks/UnityAdsLocal.podspec'
+    pod 'shared', :path => 'Frameworks/sharedLocal.podspec'
+end
+
+target 'iosApp' do
+    # Local Podspecs
+    shared_pods
+end
+
